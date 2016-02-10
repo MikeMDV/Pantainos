@@ -12,7 +12,7 @@
 #include <string>
 #include <cstdlib>
 #include "rangecheck.h"
-#include "rangecheck.cpp"
+#include "rangecheck.cpp" // Solves “Undefined reference to” compiler issue
 
 const int RANGE_MIN   = 1;
 const int RANGE_MAX   = 100;
