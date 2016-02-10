@@ -79,4 +79,105 @@ void testInts()
         std::cout << e.what() << "\n";
     }
     
+    // Call inRngInclMin and print result to console; Expected output: "1"
+    std::cout << IN_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min: "
+              << testRC.inRngInclMin(IN_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngInclMin and print result to console; Expected output: "1"
+    std::cout << RANGE_MIN << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min: "
+              << testRC.inRngInclMin(RANGE_MIN, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngInclMin and print result to console; Expected output: "0"
+    std::cout << BELOW_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min: "
+              << testRC.inRngInclMin(BELOW_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngInclMin and print result to console; Expected output: "0"
+    std::cout << ABOVE_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min: "
+              << testRC.inRngInclMin(ABOVE_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Check range with min and max reversed; Expected output: error msg
+    std::cout << "Testing min and max reversed: \n";
+    try
+    {
+        testRC.inRngInclMin(RANGE_MAX, RANGE_MAX, RANGE_MIN);
+        std::cout << RANGE_MAX << "is in range.\n";
+    }
+    catch(std::out_of_range e)
+    {
+        std::cout << e.what() << "\n";
+    }
+    
+    // Call inRngInclMax and print result to console; Expected output: "1"
+    std::cout << IN_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of max: "
+              << testRC.inRngInclMax(IN_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngInclMax and print result to console; Expected output: "1"
+    std::cout << RANGE_MAX << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of max: "
+              << testRC.inRngInclMax(RANGE_MAX, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngInclMax and print result to console; Expected output: "0"
+    std::cout << BELOW_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of max: "
+              << testRC.inRngInclMax(BELOW_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngInclMax and print result to console; Expected output: "0"
+    std::cout << ABOVE_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of max: "
+              << testRC.inRngInclMax(ABOVE_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Check range with min and max reversed; Expected output: error msg
+    std::cout << "Testing min and max reversed: \n";
+    try
+    {
+        testRC.inRngInclMax(RANGE_MAX, RANGE_MAX, RANGE_MIN);
+        std::cout << RANGE_MAX << "is in range.\n";
+    }
+    catch(std::out_of_range e)
+    {
+        std::cout << e.what() << "\n";
+    }
+    
+    // Call inRngIncl and print result to console; Expected output: "1"
+    std::cout << IN_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min and max: "
+              << testRC.inRngIncl(IN_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngIncl and print result to console; Expected output: "1"
+    std::cout << RANGE_MAX << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min and max: "
+              << testRC.inRngIncl(RANGE_MAX, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngIncl and print result to console; Expected output: "1"
+    std::cout << RANGE_MIN << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min and max: "
+              << testRC.inRngIncl(RANGE_MAX, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngIncl and print result to console; Expected output: "0"
+    std::cout << BELOW_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min and max: "
+              << testRC.inRngIncl(BELOW_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Call inRngIncl and print result to console; Expected output: "0"
+    std::cout << ABOVE_RANGE << " is in the range of " << RANGE_MIN << " to "
+              << RANGE_MAX << " inclusive of min and max: "
+              << testRC.inRngIncl(ABOVE_RANGE, RANGE_MIN, RANGE_MAX) << "\n";
+              
+    // Check range with min and max reversed; Expected output: error msg
+    std::cout << "Testing min and max reversed: \n";
+    try
+    {
+        testRC.inRngIncl(RANGE_MAX, RANGE_MAX, RANGE_MIN);
+        std::cout << RANGE_MAX << "is in range.\n";
+    }
+    catch(std::out_of_range e)
+    {
+        std::cout << e.what() << "\n";
+    }
+    
 }
