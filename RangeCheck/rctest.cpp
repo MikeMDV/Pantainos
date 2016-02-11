@@ -23,7 +23,7 @@ const double RNG_MIN_D = 1.34;
 const double RNG_MAX_D = 5.6745;
 const double IN_RNG_D  = 2.458;
 const double BEL_RNG_D = 1.3399999999;
-const double ABV_RNG_D = 2.458000001;
+const double ABV_RNG_D = 5.67450000001;
 
 
 
@@ -42,6 +42,7 @@ int main (int argc, char *argv[])
 {
     // Run tests
     testInts();
+    testDoubles();
     
     return 0;
 }
