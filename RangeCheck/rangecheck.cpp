@@ -1,7 +1,7 @@
 /*
  *             Author: Michael Marven
  *       Date Created: 02/09/16
- * Last Date Modified: 02/09/16
+ * Last Date Modified: 02/13/16
  *          File Name: rangecheck.cpp
  *           Overview: This is the implementation file for the RangeCheck 
  *                     template class
@@ -20,7 +20,7 @@ namespace RCheckMarven
     
     /*   *   *   *   *   *   *
      * 
-     * Function: inRngExcl(const T&, const T&, const T&)
+     * Function: excl(const T&, const T&, const T&)
      * 
      *    Input: Data element, minimum & maximum values for comparison
      *
@@ -33,7 +33,7 @@ namespace RCheckMarven
      *
      *   *   *   *   *   *   */
     template <typename T>
-    bool RangeCheck<T>::inRngExcl(const T& elem, const T& min, const T& max)
+    bool RangeCheck<T>::excl(const T& elem, const T& min, const T& max)
                             throw (std::out_of_range)
     {
         if (min >= max)
@@ -47,7 +47,7 @@ namespace RCheckMarven
     
     /*   *   *   *   *   *   *
      * 
-     * Function: inRngInclMin(const T&, const T&, const T&)
+     * Function: inclMin(const T&, const T&, const T&)
      * 
      *    Input: Data element, minimum & maximum values for comparison
      *
@@ -60,7 +60,7 @@ namespace RCheckMarven
      *
      *   *   *   *   *   *   */
     template <typename T>
-    bool RangeCheck<T>::inRngInclMin(const T& elem, const T& min, const T& max)
+    bool RangeCheck<T>::inclMin(const T& elem, const T& min, const T& max)
                             throw (std::out_of_range)
     {
         if (min >= max)
@@ -74,7 +74,7 @@ namespace RCheckMarven
     
     /*   *   *   *   *   *   *
      * 
-     * Function: inRngInclMax(const T&, const T&, const T&)
+     * Function: inclMax(const T&, const T&, const T&)
      * 
      *    Input: Data element, minimum & maximum values for comparison
      *
@@ -87,7 +87,7 @@ namespace RCheckMarven
      *
      *   *   *   *   *   *   */
     template <typename T>
-    bool RangeCheck<T>::inRngInclMax(const T& elem, const T& min, const T& max)
+    bool RangeCheck<T>::inclMax(const T& elem, const T& min, const T& max)
                             throw (std::out_of_range)
     {
         if (min >= max)
@@ -101,7 +101,7 @@ namespace RCheckMarven
     
     /*   *   *   *   *   *   *
      * 
-     * Function: inRngInclMax(const T&, const T&, const T&)
+     * Function: incl(const T&, const T&, const T&)
      * 
      *    Input: Data element, minimum & maximum values for comparison
      *
@@ -114,7 +114,7 @@ namespace RCheckMarven
      *
      *   *   *   *   *   *   */
     template <typename T>
-    bool RangeCheck<T>::inRngIncl(const T& elem, const T& min, const T& max)
+    bool RangeCheck<T>::incl(const T& elem, const T& min, const T& max)
                             throw (std::out_of_range)
     {
         if (min > max)
