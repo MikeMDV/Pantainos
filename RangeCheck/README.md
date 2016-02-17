@@ -8,11 +8,11 @@ support those operators.
 
 #### Methods ####
 
-* inRngExcl() Check if value is in the range, exclusive of minimum and maximum
+* excl() Check if value is in the range, exclusive of minimum and maximum
     * Example: (0, 100)
-* inRngInclMin() Check if value is in the range, inclusive of minimum only
+* inclMin() Check if value is in the range, inclusive of minimum only
     * Example: [0, 100)
-* inRngInclMax() Check if value is in the range, inclusive of maximum only
+* inclMax() Check if value is in the range, inclusive of maximum only
     * Example: (0, 100]
-* inRngIncl() Check if value is in the range, inclusive of both min and max
+* incl() Check if value is in the range, inclusive of both min and max
     * Example: [0, 100]
