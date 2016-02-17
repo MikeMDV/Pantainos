@@ -82,7 +82,7 @@ namespace RCheckMarven
      *
      *  Purpose: Check whether element is within range of min and max value,
      *           inclusive of the maximum; Throws an out_of_range exception 
-     *           if min value is greater than or equal to max value     
+     *           if min value is greater than max value     
      *
      *
      *   *   *   *   *   *   */
